@@ -288,21 +288,21 @@ function convertDictsToArrayOfArrays(arr) {
 
 function getAlert(alertInfo) {
     var alertTitle = document.getElementById('alert_title');
-    var alertTitlecolor = 'white';
+    var alertTitlecolor = 'black';
     var alertTitlebackgroundColor = "white";
     var alertBorderColor = "#1A1A1A";
     var alertBorderWidth = "0px";
     if (alertInfo.properties.event.includes("Severe Thunderstorm")) {
-        alertTitlebackgroundColor = "red";
+        alertTitlebackgroundColor = "yellow";
         if (alertInfo.properties.description.toLowerCase().includes("80 mph") || alertInfo.properties.description.toLowerCase().includes("destructive")) {
-            alertBorderColor = "darkred";
+            alertBorderColor = "yellow";
             alertBorderWidth = "0px";
         }
     } else if (alertInfo.properties.event.includes("Tornado")) {
         alertTitlecolor = 'white';
-        alertTitlebackgroundColor = "magenta";
+        alertTitlebackgroundColor = "red";
         if (alertInfo.properties.description.toLowerCase().includes("tornado emergency")) {
-            alertBorderColor = "darkpurple";
+            alertBorderColor = "magenta";
             alertBorderWidth = "0px";
         }
     } else if (alertInfo.properties.event.includes("Flash Flood Warning")) {
@@ -314,7 +314,7 @@ function getAlert(alertInfo) {
         }
     } else if (alertInfo.properties.event.includes("Special Weather")) {
         alertTitlecolor = 'white';
-        alertTitlebackgroundColor = "gold";
+        alertTitlebackgroundColor = "white";
     }
     var construct = '<div class="alert-header" style="background-color: ' + alertTitlebackgroundColor + '; color: ' + alertTitlecolor + ';">' + alertInfo.properties.event + '</div><div style="overflow-y: auto; border: ' + alertBorderWidth + ' solid ' + alertBorderColor + ';">';
     construct = construct + '<p style="margin: 0px;"><b>Issued:</b> ' + formatTimestamp(alertInfo.properties.sent) + '</p>';
@@ -386,22 +386,22 @@ function formatDate(inputDateString) {
 }
 
 function getAlert(alertInfo) {
-    var alertTitlecolor = 'white';
+    var alertTitlecolor = 'black';
     var alertTitlebackgroundColor = "white";
     var alertBorderColor = "#1A1A1A";
     var alertBorderWidth = "0px";
 
     if (alertInfo.properties.event.includes("Severe Thunderstorm")) {
-        alertTitlebackgroundColor = "red";
+        alertTitlebackgroundColor = "yellow";
         if (alertInfo.properties.description.toLowerCase().includes("80 mph wind gusts") || alertInfo.properties.description.toLowerCase().includes("destructive storm")) {
-            alertBorderColor = "darkred";
+            alertBorderColor = "yellow";
             alertBorderWidth = "0px";
         }
     } else if (alertInfo.properties.event.includes("Tornado")) {
         alertTitlecolor = 'white';
-        alertTitlebackgroundColor = "magenta";
+        alertTitlebackgroundColor = "red";
         if (alertInfo.properties.description.toLowerCase().includes("tornado emergency")) {
-            alertBorderColor = "darkpurple";
+            alertBorderColor = "magenta";
             alertBorderWidth = "0px";
         }
     } else if (alertInfo.properties.event.includes("Flash Flood Warning")) {
@@ -413,7 +413,7 @@ function getAlert(alertInfo) {
         }
     } else if (alertInfo.properties.event.includes("Special Weather")) {
         alertTitlecolor = 'white';
-        alertTitlebackgroundColor = "gold";
+        alertTitlebackgroundColor = "white";
     }
 
     var construct = '<div class="alert-header" style="background-color: ' + alertTitlebackgroundColor + '; color: ' + alertTitlecolor + ';">' + alertInfo.properties.event + '</div>';
@@ -622,10 +622,10 @@ function showAlertPopup(alertInfo) {
 }
 
 function getAlertHeaderColor(event) {
-    if (event.includes("Severe Thunderstorm")) return "red";
-    if (event.includes("Tornado")) return "magenta";
+    if (event.includes("Severe Thunderstorm")) return "yellow";
+    if (event.includes("Tornado")) return "red";
     if (event.includes("Flash Flood Warning")) return "lime";
-    if (event.includes("Special Weather")) return "gold";
+    if (event.includes("Special Weather")) return "white";
     return "white";
 }
 
@@ -664,15 +664,15 @@ function loadAlerts() {
                     console.log(thisItem);
                     var polygonOptions = {};
                     if (alert.properties.event.includes("Severe Thunderstorm")) {
-                        polygonOptions.color = 'red';
+                        polygonOptions.color = 'yellow';
                         if (alert.properties.description.toLowerCase().includes("80 mph") || alert.properties.description.toLowerCase().includes("destructive")) {
-                            polygonOptions.color = 'darkred';
+                            polygonOptions.color = 'yellow';
                             polygonOptions.weight = 5;
                         }
                     } else if (alert.properties.event.includes("Tornado")) {
-                        polygonOptions.color = 'magenta';
+                        polygonOptions.color = 'red';
                         if (alert.properties.description.toLowerCase().includes("tornado emergency")) {
-                            polygonOptions.color = 'darkpurple';
+                            polygonOptions.color = 'magenta';
                             polygonOptions.weight = 5;
                         }
                     } else if (alert.properties.event.includes("Flash Flood Warning")) {
@@ -682,7 +682,7 @@ function loadAlerts() {
                             polygonOptions.weight = 5;
                         }
                     } else if (alert.properties.event.includes("Special Weather")) {
-                        polygonOptions.color = 'gold';
+                        polygonOptions.color = 'white';
                     }
                     if (polygonOptions.color) {
                         var polygon = L.polygon(reverseSubarrays(thisItem), polygonOptions).addTo(map);
@@ -1025,25 +1025,25 @@ function loadAlerts() {
                     console.log(thisItem);
                     var polygonOptions = {};
                     if (alert.properties.event.includes("Severe Thunderstorm")) {
-                        polygonOptions.color = 'red';
+                        polygonOptions.color = 'yellow';
                         if (alert.properties.description.toLowerCase().includes("80 mph") || alert.properties.description.toLowerCase().includes("destructive")) {
-                            polygonOptions.color = 'darkred';
+                            polygonOptions.color = 'yellow';
                             polygonOptions.weight = 5;
                         }
                     } else if (alert.properties.event.includes("Tornado")) {
-                        polygonOptions.color = 'magenta';
+                        polygonOptions.color = 'red';
                         if (alert.properties.description.toLowerCase().includes("tornado emergency")) {
-                            polygonOptions.color = 'darkpurple';
+                            polygonOptions.color = 'magenta';
                             polygonOptions.weight = 5;
                         }
                     } else if (alert.properties.event.includes("Flash Flood Warning")) {
-                        polygonOptions.color = 'lime';
+                        polygonOptions.color = 'green';
                         if (alert.properties.description.toLowerCase().includes("flash flood emergency")) {
                             polygonOptions.color = 'darkgreen';
                             polygonOptions.weight = 5;
                         }
                     } else if (alert.properties.event.includes("Special Weather")) {
-                        polygonOptions.color = 'gold';
+                        polygonOptions.color = 'white';
                     }
                     if (polygonOptions.color) {
                         var polygon = L.polygon(reverseSubarrays(thisItem), polygonOptions).addTo(map);

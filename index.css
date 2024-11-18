@@ -618,10 +618,10 @@ a { color: white; }
             border-radius: 5px;
             margin-bottom: 5px;
         }
-        .alert-severe-thunderstorm { background-color: red; color: white; }
-        .alert-tornado { background-color: magenta; color: white; }
+        .alert-severe-thunderstorm { background-color: gold; color: white; }
+        .alert-tornado { background-color: red; color: white; }
         .alert-flash-flood { background-color: lime; color: white; }
-        .alert-special-weather { background-color: gold; color: white; }
+        .alert-special-weather { background-color: white; color: white; }
         .small-border {
             border-bottom: 1px solid #636381;
             margin-bottom: 5px;
