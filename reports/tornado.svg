@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 32 48" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M0 25.3726C-3.55271e-15 16.536 7.16344 9.37258 16 9.37258C24.8366 9.37258 32 16.536 32 25.3726C32 34.2091 24.8366 41.3726 16 41.3726C7.16344 41.3726-3.55271e-15 34.2091 0 25.3726Z" fill="#fce8e8" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Oval 1"/>
+<path d="M4.68629 36.6863L16 25.3726L27.3137 36.6863L16 48L4.68629 36.6863Z" fill="#fce8e8" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rectangle 1"/>
+<path d="M6 25.3726C6 19.8497 10.4772 15.3726 16 15.3726C21.5228 15.3726 26 19.8497 26 25.3726C26 30.8954 21.5228 35.3726 16 35.3726C10.4772 35.3726 6 30.8954 6 25.3726Z" fill="#fc5d5d" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Oval 2"/>
+<path d="M10 19.3712L10 19.7355C10 20.1936 10.0455 20.6462 10.1339 21.0855L19.5839 21.0855C19.6696 20.9007 19.7848 20.7293 19.9321 20.582L20.9661 19.548C21.0786 19.4355 21.1429 19.2802 21.1429 19.1195C21.1429 18.7846 20.8723 18.5141 20.5375 18.5141L10.8571 18.5141C10.383 18.5141 10 18.8971 10 19.3712ZM19.4339 21.9427L10.3643 21.9427C10.6911 22.9043 11.2295 23.7829 11.9393 24.5141L21.0357 24.5141L19.7714 22.8293C19.5759 22.5695 19.4607 22.2614 19.4339 21.9427ZM13.3804 25.6445L16.4982 27.4793C16.7179 27.6079 16.9214 27.7659 17.1009 27.9427L21.9196 27.9427C21.9732 27.6802 22 27.4096 22 27.1364C22 26.5204 21.858 25.9177 21.5902 25.3712L12.9518 25.3712C13.0911 25.4677 13.233 25.5587 13.3804 25.6445ZM17.7143 28.7998C17.9902 29.373 18.0839 30.0186 17.9795 30.648L17.8214 31.6043C17.7679 31.9311 18.0196 32.2311 18.3518 32.2311C18.4937 32.2311 18.6304 32.1748 18.7321 32.073L20.8268 29.9784C21.1696 29.6355 21.4455 29.2364 21.6411 28.8025L17.7143 28.7998Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+</g>
+</svg>

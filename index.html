@@ -1,330 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Radar - Xtreme Weather Discord</title>
-    <link rel="icon" type="image/png" href="https://i.ibb.co/NjzHVKk/IMG-0633-32x32-1.png">
-    <meta charset="utf-8"/>
-   <meta content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
-    <meta property="og:title" content="Live Radar - Xtreme Weather Discord">
-    <meta property="og:description" content="The official Xtreme Weather radar offers live alerts, watches, reports, customizable color schemes, satellite imagery, smoothing options, and much more—all for free.">
-    <meta property="og:image" content="https://i.ibb.co/NjzHVKk/IMG-0633-32x32-1.png">
-  <link rel="preload" href="https://api.maptiler.com/maps/d3bdcfa3-d8d8-4bc1-958d-6d1780cb4de1/style.json?key=drXsj04WIDowwjjOrinL" as="fetch" crossorigin="anonymous">
-<link rel="preload" href="https://api.maptiler.com/maps/3d1b9c2b-3b90-4457-8310-fbd15c34d453/style.json?key=HKGa1lnD7ToUuzx5Ohp0" as="fetch" crossorigin="anonymous">
-<link rel="preload" href="https://api.maptiler.com/maps/645f642d-36b4-42d1-8b02-b9968eff3443/style.json?key=HKGa1lnD7ToUuzx5Ohp0" as="fetch" crossorigin="anonymous">
-<link rel="preload" href="https://api.maptiler.com/maps/dd940e48-cc35-41f3-b8e6-3942e4a1f75b/style.json?key=HKGa1lnD7ToUuzx5Ohp0" as="fetch" crossorigin="anonymous">
-    <link rel="preload" href="https://i.postimg.cc/6phc4hHF/IMG-4634-removebg-preview.webp" as="image">
-    <link rel="preload" href="https://i.postimg.cc/TPR22TSn/IMG-4615-removebg-preview.webp" as="image">
-    <link rel="preload" href="https://i.postimg.cc/4d2xFjWV/IMG-4613-removebg-preview.webp" as="image">
-    <link rel="preload" href="https://i.postimg.cc/3JBc57gs/IMG-4607-removebg-preview.webp" as="image">
-    <link rel="preload" href="https://i.postimg.cc/bJxRxHg7/IMG-4608-removebg-preview.webp" as="image">
-    <link rel="preload" href="https://i.postimg.cc/K8C7CsHX/IMG-4610-removebg-preview-1.webp" as="image">
-    <link rel="preload" href="https://i.postimg.cc/gcMZfTxM/IMG-4619-removebg-preview.webp" as="image">
-    <link rel="preload" href="https://i.ibb.co/BLpDqjr/IMG-7262.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/HTgK74M/download-32.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/rd1xJLg/download-33.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/b29Tb0C/download-34.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/Fw0D7Ky/download-35.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/p2fBxNk/download-36.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/r2yj8cm/2.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/SPgBMTd/5-wind.png" as="image">
-    <link rel="preload" href="https://i.postimg.cc/NF0xFHd6/10-tor.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/Vwbz2g1/IMG-7277-modified.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/qYjRDwM/30-tor.png" as="image">
-    <link rel="preload" href="https://i.postimg.cc/BZhgymvM/45-tor.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/jD4gf2F/15-wind.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/L1hKKkp/IMG-7262-1.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/rpPKWXw/30-wind.png" as="image">
-    <link rel="preload" href="https://i.ibb.co/dtkmMpp/45-wind.png" as="image">
-    <link rel="preload" href="https://kit.fontawesome.com/7c0d120d1b.js" as="script" crossorigin="anonymous">
-    <link rel="preload" href="https://kit.fontawesome.com/7c0d120d1b.css" as="style" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMY5tA5LUfUWzQcJdVPHfGl4Z4wUmkO9j/+zTYM" crossorigin="anonymous">
-
-
- <link rel="preload" href="https://i.postimg.cc/CMW0J24t/IMG-4612-removebg-preview-1.webp" as="image">
-<link rel="preload" href="https://i.postimg.cc/TPR22TSn/IMG-4615-removebg-preview.webp" as="image">
-<link rel="preload" href="https://i.ibb.co/vw43hWJ/Square-256x-20.png" as="image">
-    
-     <link rel="stylesheet" href="style.css">
-
-     
-  <!-- Control Bar at Bottom with Updated Margins and Button Sizes -->
-<div id="control-bar">
-    <ul style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center;">
-        <!-- Backward Button -->
-        <li class="sli">
-            <button class="control-button" onclick="stop(); showFrame(animationPosition - 1); return;">
-                <i class="fa-solid fa-backward"></i>
-            </button>
-        </li>
-
-        <!-- Play/Stop Button -->
-        <li class="sli">
-            <button class="control-button" onclick="playStop();" id="stbtn">
-                <i class="fa-solid fa-play"></i>
-            </button>
-        </li>
-
-        <!-- Forward Button -->
-        <li class="sli">
-            <button class="control-button" onclick="stop(); showFrame(animationPosition + 1); return;">
-                <i class="fa-solid fa-forward"></i>
-            </button>
-        </li>
-
-        <!-- Refresh Radar Button -->
-        <li class="sli">
-            <button class="control-button" onclick="refreshRadar();">
-                <i class="fa-solid fa-refresh"></i>
-            </button>
-        </li>
-
-        <!-- Layers Button -->
-        <li class="sli">
-            <button id="layers-button" class="control-button">
-                <i class="fa-solid fa-layer-group"></i>
-            </button>
-        </li>
-
-        <!-- Info Button -->
-        <li class="sli">
-            <button id="info-button" class="control-button">
-                <i class="fa-solid fa-info-circle"></i>
-            </button>
-        </li>
-    </ul>
-</div>
-
-
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2L4XKHE9RM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2L4XKHE9RM');
-</script>
+    <title>Radar</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.umd.js"></script>
-<script src="https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.umd.js"></script>
     <link href="https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.css" rel="stylesheet" />
     <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v2.0.0/leaflet-maptilersdk.js"></script>
     <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/7c0d120d1b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="preload" href="https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.css" as="style" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" as="style">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style">
-
-<link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" as="script">
-<link rel="preload" href="https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.umd.js" as="script" crossorigin="anonymous">
-<link rel="preload" href="https://kit.fontawesome.com/7c0d120d1b.js" as="script" crossorigin="anonymous">
-
-
-    
-    <div style="position: absolute; left: 50%; top: 30px;">
-        <div class="overlay-object overlay-border" id="timestamp" style="cursor: default; text-align:center; position: relative; left: -50%;">Loading...</div>
-    </div>
-
-<!-- Hurricane Settings Submenu -->
-<div id="hurricane-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');">
-            <i class="fa-solid fa-times"></i>
-        </button>
-    </div>
-    <div style="margin-top: 10px;">
-        <p class="settings-title"><b>Hurricane Settings</b></p>
-        <button id="toggle-hurricanes" style="margin-bottom: 5px;" class="submenu-button" onclick="toggleHurricanes();">
-            <i class="fa-solid fa-hurricane"></i> Toggle Hurricanes
-        </button>
-      
-
-        <!-- New Toggle Disturbances Button -->
-        <button id="toggle-disturbances" class="submenu-button" onclick="toggleInvests();">
-            <i class="fa-solid fa-wind"></i> Toggle Disturbances
-        </button>
-         <p>Toggle the display of hurricane tracks and data on the map.</p>
-    </div>
-</div>
-
-
-<div id="layers-menu">
-    <div class="menu-header">
-        <button class="exit-button exit-button-only" style="width: 40px;" onclick="toggleMainMenu('');">
-            <i class="fa-solid fa-times"></i>
-        </button>
-    </div>
-    <button id="map-menu-button" class="menu-button" onclick="toggleSubMenu('map-settings');">
-        <i class="fa-solid fa-map"></i> Mapping <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <button id="radar-menu-button" class="menu-button" onclick="toggleSubMenu('radar-settings');">
-        <i class="fa-solid fa-satellite-dish"></i> Radar <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <button id="alerts-menu-button" class="menu-button" onclick="toggleSubMenu('alerts-settings');">
-        <i class="fa-solid fa-triangle-exclamation"></i> Alerts <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <!-- New Hurricanes Button -->
-    <button id="hurricane-menu-button" class="menu-button" onclick="toggleSubMenu('hurricane-settings');">
-        <i class="fa-solid fa-hurricane"></i> Hurricanes <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <button id="reports-menu-button" class="menu-button" onclick="toggleSubMenu('reports-settings');">
-        <i class="fa-solid fa-flag"></i> Reports <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <button id="outlooks-menu-button" class="menu-button" onclick="toggleSubMenu('outlooks-settings');">
-        <i class="fas fa-cloud-showers-heavy"></i> Outlooks <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <button id="lightning-menu-button" class="menu-button" onclick="toggleSubMenu('lightning-settings');">
-        <i class="fa-solid fa-bolt"></i> Lightning <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <!-- New Weather Radio Button -->
-    <button id="weather-radio-menu-button" class="menu-button" onclick="toggleSubMenu('weather-radio-settings');">
-        <i class="fas fa-radio"></i> Weather Radio <i class="fa-solid fa-chevron-right"></i>
-    </button>
-</div>
-
-</div>
-
-<div id="outlooks-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');">
-            <i class="fa-solid fa-times"></i>
-        </button>
-    </div>
-    <div style="margin-top: 10px;">
-        <p class="settings-title"><b>Outlook Settings</b></p>
-    </div>
-
-<div class="outlook-group">
-        <!-- Day 1 Outlooks -->
-        <div class="outlook-selector">
-            <b>Day 1:</b>
-            <div>
-                <input type="checkbox" id="convective_day1" name="outlook" onclick="updateOutlookType('day1', 'convective_day1');">
-                <label for="convective_day1">Convective Outlook</label><br>
-                <input type="checkbox" id="tornado_day1" name="outlook" onclick="updateOutlookType('day1', 'tornado_day1');">
-                <label for="tornado_day1">Tornado Outlook</label><br>
-                <input type="checkbox" id="wind_day1" name="outlook" onclick="updateOutlookType('day1', 'wind_day1');">
-                <label for="wind_day1">Wind Outlook</label><br>
-                <input type="checkbox" id="hail_day1" name="outlook" onclick="updateOutlookType('day1', 'hail_day1');">
-                <label for="hail_day1">Hail Outlook</label>
-            </div>
-        </div>
-
-        <!-- Spacer -->
-        <div style="margin-top: 20px;"></div>
-
-        <!-- Day 2 Outlooks -->
-        <div class="outlook-selector">
-            <b>Day 2:</b>
-            <div>
-                <input type="checkbox" id="convective_day2" name="outlook" onclick="updateOutlookType('day2', 'convective_day2');">
-                <label for="convective_day2">Convective Outlook</label><br>
-                <input type="checkbox" id="tornado_day2" name="outlook" onclick="updateOutlookType('day2', 'tornado_day2');">
-                <label for="tornado_day2">Tornado Outlook</label><br>
-                <input type="checkbox" id="wind_day2" name="outlook" onclick="updateOutlookType('day2', 'wind_day2');">
-                <label for="wind_day2">Wind Outlook</label><br>
-                <input type="checkbox" id="hail_day2" name="outlook" onclick="updateOutlookType('day2', 'hail_day2');">
-                <label for="hail_day2">Hail Outlook</label>
-            </div>
-        </div>
-
-        <!-- Spacer -->
-        <div style="margin-top: 20px;"></div>
-
-        <!-- Day 3 Outlooks -->
-        <div class="outlook-selector">
-            <b>Day 3:</b>
-            <div>
-                <input type="checkbox" id="convective_day3" name="outlook" onclick="updateOutlookType('day3', 'convective_day3');">
-                <label for="convective_day3">Convective Outlook</label> 
-            </div>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div style="position: absolute; left: 17px; bottom: 43px;">
+        <div class="overlay-object overlay-border" style="position: relative; padding-left: 5px;">
+            <ul style="text-align: center; padding-left: 0px; margin: 0px; position: relative; left: 2.5px;">
+                <li class="sli"><button class="control-button" onclick="stepBackward()" id="playback-backward"><i class="fa-solid fa-backward"></i></button></li>
+                <li class="sli"><button class="control-button" onclick="playStop();" id="playback-playpause"><i class="fa-solid fa-play"></i></button></li>
+                <li class="sli"><button class="control-button" onclick="stepForward()" id="playback-forward"><i class="fa-solid fa-forward"></i></button></li>
+                <li class="sli"><button class="control-button" onclick="refreshRadar();"><i class="fa-solid fa-refresh"></i></button></li>
+                <li class="sli"><button id="layers-button" class="control-button"><i class="fa-solid fa-layer-group"></i></button></li>
+                <li class="sli"><button id="info-button" class="control-button"><i class="fa-solid fa-info-circle"></i></button></li>
+                <li class="sli"><button id="lcbtn" onclick="locate()" class="control-button"><i class="fa-solid fa-location-arrow" id="lcicn"></i></button></li>
+            </ul>
         </div>
     </div>
-</div>
 
-<!-- Report settings submenu -->
-<div id="reports-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+    <div style="position: absolute; left: 50%; top: 30px; z-index: 998; transform: translate(-50%, 0%);">
+        <div class="overlay-object overlay-border" id="timestamp" style="cursor: default; text-align:center; position: relative;">Loading...</div>
+        <input type="range" min="0" max="14" value="12" step="1" id="timeline-slider">
     </div>
-    <div style="margin-top: 10px;">
-        <p class="alert-settings-title"><b>Report Settings</b></p> <!-- Adjusted here -->
-        <button id="togglereports" onclick="toggleReports();" style="font-size: 17px; background-color: white; color: #7F1DF0; border: #636381 2px solid;"><i class="fa-solid fa-flag"></i> Toggle Reports</button>
-<p>Toggle the display of real-time storm reports on the map. Reports are automatically removed 2 hours after their initial appearance.  
-</p>
-    </div>
-</div>
 
-<!-- Map settings submenu -->
-<div id="map-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+    <div class="overlay-object" style="border: 5px solid rgb(26, 26, 26); width: 360px; visibility: hidden; overflow-y: auto; margin-top: 10px; height: 50%; border-radius: 5px;  -moz-border-radius: 5px; scrollbar-width: none; position: absolute; bottom: 20px; left: 37px;" id="alertDeets">
+        <div id="alert_title" style="display: flex; justify-content: center; width: auto; padding: 5px; border-radius: 5px; font-size: 20px; font-weight: bolder;"></div>
+        <p style="height:2px"></p>
+        <p id="alert_issued" style="padding-left: 5px; margin: 4px;">Unknown issuance</p>
+        <p id="alert_expiration" style="padding-left: 5px; margin: 4px;">Unknown expiration</p>
+        <p style="height:2px"></p>
+        <p id="alert_hazards" style="padding-left: 5px; margin: 4px;">Unknown hazards</p>
+        <p id="alert_impacts" style="padding-left: 5px; margin: 4px;">Unknown impacts</p>
+        <p style="height:2px"></p>
+        <p id="alert_areas" style="padding-left: 5px; margin: 4px;">Unknown areas</p>
+        <br>
+        <p id="alert_description" style="padding-left: 5px; margin: 4px;">Unknown description</p>
     </div>
-    <div style="margin-top: 0px;">
-        <p class="settings-title"><b>Map Type</b></p>
-        <label><input type="radio" name="map-type" value="light" onclick="setMapType('light')"> Light Mode</label><br>
-        <label><input type="radio" name="map-type" value="dark" onclick="setMapType('dark')"> Dark Mode</label><br>
-        <label><input type="radio" name="map-type" value="satellite" onclick="setMapType('satellite')"> Satellite</label>
+
+    <!--Layers menu-->
+    <div id="layers-menu">
+        <div class="menu-header">
+            <button class="exit-button exit-button-only" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <button id="alerts-menu-button" class="submenu-button layers-button-item-1" onclick="toggleSubMenu('alerts-settings');"><i class="fa-solid fa-triangle-exclamation"></i> Alerts <i class="fa-solid fa-chevron-right layers-chevron"></i></button>
+        <button id="radar-menu-button" class="submenu-button layers-button-item-2" onclick="toggleSubMenu('radar-settings');"><i class="fa-solid fa-satellite-dish"></i> Radar <i class="fa-solid fa-chevron-right layers-chevron"></i></button>
+        <button id="map-menu-button" class="submenu-button layers-button-item-3" onclick="toggleSubMenu('map-settings');"><i class="fa-solid fa-map"></i> Map <i class="fa-solid fa-chevron-right layers-chevron"></i></button>
+        <button id="tools-menu-button" class="submenu-button layers-button-item-4" disabled onclick="toggleSubMenu('tools-settings');" aria-label="Coming Soon"><i class="fa-solid fa-pen-to-square"></i> Tools <i class="fa-solid fa-chevron-right layers-chevron"></i></button>
     </div>
-    <div id="location-settings-container" style="margin-top: 20px;">
-        <p class="settings-title" style="text-align: left; padding-left: 2px;"><b>Location Settings</b></p>
-        <button id="current-location-button" class="location-button" style="font-size: 17px; background-color: #636381; color: white; border: 2px solid white; margin-top: 5px;">
-            <i class="fa-solid fa-location-arrow"></i> Show Location
-        </button>
-        <p style="font-size: 14px; color: #98FB98; display: flex; align-items: center; justify-content: center; margin-top: 10px;">
-            <i class="fa-solid fa-shield-alt" style="color: #98FB98; font-size: 18px; margin-right: 5px;"></i>
-            Location data is never saved.
-        </p>
+
+    <!--Map settings submenu-->
+    <div id="map-settings">
+        <div class="menu-header">
+            <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div style="margin-top: 0px;">
+            <p class="settings-title"><b>Map Type:</b></p>
+            <!-- Applied class here -->
+            <label><input type="radio" class="radio-input" name="map-type" value="light" onclick="setMapType('light')"> Light Mode</label><br>
+            <label><input type="radio" class="radio-input" name="map-type" value="dark" onclick="setMapType('dark')"> Dark Mode</label><br>
+            <label><input type="radio" class="radio-input" name="map-type" value="satellite" onclick="setMapType('satellite')"> Satellite</label>
+        </div>
     </div>
-</div>
 
- <div id="radar-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
-    </div>
-    <div style="margin-top: 10px;">
-        <p class="settings-title"><b>Radar Type</b></p>
-        <label><input type="radio" name="radar-type" value="radar" checked onclick="setRadarType('radar')"> Radar</label>
-        <label><input type="radio" name="radar-type" value="satellite" onclick="setRadarType('satellite')"> Infrared Satellite</label>
-    </div>
-    <div style="margin-top: 20px;">
-        <p class="settings-title"><b>Radar Settings</b></p>
-
-        <!-- Smoothing Button (First) -->
-        <button id="smoothing-button" onclick="toggleSmoothing();" style="font-size: 16px; background-color: white; color: #7F1DF0; border: 2px solid #636381; border-radius: 10px;">
-            <i class="fa-solid fa-wave-square"></i> Smoothing On
-        </button>
-
-        <!-- Animation Speed Button (Second) -->
-        <button id="speed-button" onclick="toggleAnimationSpeed();" style="font-size: 16px; background-color: white; color: #7F1DF0; border: 2px solid #636381; border-radius: 10px;">
-            <i class="fa-solid fa-forward"></i> Animation Speed: 1x
-        </button>
-
-        <!-- High Res / Low Res Button (Third) -->
-        <button id="highres-button" onclick="toggleHighRes();" style="font-size: 16px; background-color: white; color: #7F1DF0; border: 2px solid #636381; border-radius: 10px;">
-            <i class="fa-solid fa-highlighter"></i> Low Res Radar
-        </button>
-
-        <!-- Color Selection Dropdown (Styled to match buttons) -->
-        <select id="colors" onchange="setColors();" style="font-size: 14px; background-color: white; color: #7F1DF0; border: 2px solid #636381; border-radius: 10px; font-family: 'Inter', sans-serif;">
+    <!--Radar settings submenu-->
+    <div id="radar-settings">
+        <div class="menu-header">
+            <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div style="margin-top: 10px;">
+            <p class="settings-title"><b>Radar Type:</b></p>
+            <!-- Applied class here -->
+            <label><input type="radio" class="radio-input" name="radar-type" value="radar" checked onclick="setRadarType('radar')"> Radar</label>
+            <label><input type="radio" class="radio-input" name="radar-type" value="infrared" onclick="setRadarType('satellite')"> Infrared Satellite</label>
+        </div>
+        <div style="margin-top: 20px;">
+            <p class="settings-title"><b>Radar Settings:</b></p>
+            <!-- Applied class here -->
+            <button id="smoothing-button" class="config-button" onclick="toggleSmoothing();" ><i class="fa-solid fa-wave-square"></i> Smoothing On</button>
+            <button id="highres-button" class="config-button" onclick="toggleHighRes();" ><i class="fa-solid fa-highlighter"></i> Low Res Radar</button>
+            <select id="colors" onchange="setColors();" class="config-button config-palette">
             <option value="6">Original</option>
             <option value="1">Fruit</option>
             <option value="2">Universal Blue</option>
@@ -333,61 +100,41 @@
             <option value="5">WeatherBug</option>
             <option value="8">Apple Weather</option>
             <option value="7">RAINBOW @ SELEX-SI</option>
-            <option value="0">Black & White</option>
+            <option value="0">Black & White Values</option>
         </select>
+        </div>
+        <div style="margin-top: 20px;">
+            <p class="settings-title"><b>Radar Opacity:</b></p>
+            <!-- Applied class here -->
+            <input type="range" min="0" max="1" step="0.1" value="0.7" id="radar-opacity-slider" oninput="updateRadarOpacity(this.value)">
+            <span id="radar-opacity-value">0.7</span>
+        </div>
     </div>
-    <div style="margin-top: 20px;">
-        <p class="settings-title"><b>Radar Opacity:</b></p>
-        <input type="range" min="0" max="1" step="0.1" value="0.7" id="radar-opacity-slider" oninput="updateRadarOpacity(this.value)">
-        <span id="radar-opacity-value">0.7</span>
+
+    <div id="loading-screen">
+        <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="spinner">
+            <circle class="spin" cx="400" cy="400" fill="none" r="192" stroke-width="32" stroke="#ffffff" stroke-dasharray="1207 1400" stroke-linecap="butt"></circle>
+          </svg>
     </div>
-</div>
 
-
-<div id="loading-screen">
-    <div class="spinner"></div>
-</div>
-
-
-
-<!-- Alerts settings submenu -->
-<div id="alerts-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+    <!-- Alerts settings submenu -->
+    <div id="alerts-settings">
+        <div class="menu-header">
+            <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div style="margin-top: 10px;">
+            <p class="alert-settings-title"><b>Alert Settings:</b></p>
+            <button id="refreshalerts" onclick="toggleAlerts();" class="config-button"><i class="fa-solid fa-triangle-exclamation"></i> Toggle Alerts</button>
+            <button id="togglewatches" onclick="toggleWatches();" class="config-button"><i class="fa-solid fa-eye"></i> Toggle Watches</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <p class="alert-settings-title"><b>Alert Fill Opacity:</b></p>
+            <!-- Adjusted here -->
+            <input type="range" min="0" max="1" step="0.1" value="0.4" id="alert-opacity-slider" class="slider" oninput="updateAlertOpacity(this.value)">
+            <span id="alert-opacity-value">0.4</span>
+        </div>
     </div>
-    <div style="margin-top: 10px;">
-        <p class="alert-settings-title"><b>Alert Settings</b></p>
-          <button id="refreshalerts" onclick="toggleAlerts();" style="font-size: 17px; background-color: white; color: #7F1DF0; border: #636381 2px solid;"><i class="fa-solid fa-triangle-exclamation"></i> Toggle Alerts</button>    
-        <button id="togglewatches" onclick="toggleWatches();" style="font-size: 17px; background-color: white; color: #7F1DF0; border: #636381 2px solid;"><i class="fa-solid fa-eye"></i> Toggle Watches</button>
-        <button id="togglediscussions" onclick="toggleDiscussions();" style="font-size: 17px; background-color: white; color: #7F1DF0; border: 2px solid #636381;"><i class="fa-solid fa-comments"></i> Toggle Discussions</button>
-    </div>
-    <div style="margin-top: 10px;">
-        <p class="alert-settings-title"><b>Alert Fill Opacity:</b></p>
-        <input type="range" min="0" max="1" step="0.1" value="0.4" id="alert-opacity-slider" oninput="updateAlertOpacity(this.value)">
-        <span id="alert-opacity-value">0.4</span>
-    </div>
-</div>
-
-
-<!-- Lightning Settings Submenu -->
-<div id="lightning-settings">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');">
-            <i class="fa-solid fa-times"></i>
-        </button>
-    </div>
-    <div style="margin-top: 10px;">
-        <p class="settings-title"><b>Lightning Settings</b></p>
-        <button id="toggle-lightning" class="submenu-button" onclick="toggleLightning();">
-            <i class="fa-solid fa-bolt"></i> Toggle Lightning
-        </button>
-        <p>Toggle the display of real-time lightning strikes on the map.</p>
-    </div>
-</div>
 
     <!--Alert list submenu-->
     <div id="alert-list-submenu">
@@ -398,179 +145,82 @@
         <div style="margin-top: 10px;" class="small-border">
             <p style="margin: 0; padding: 2px;"><b>Alert List:</b></p>
         </div>
+        <ul id="alert-log"></ul>
     </div>
-    
-  <!-- Weather Radio Settings Submenu -->
-<div id="weather-radio-settings">
 
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('layers-menu');">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');">
-            <i class="fa-solid fa-times"></i>
-        </button>
-</div>
-    <div style="margin-top: 10px;">
-        <p style="margin-bottom: 10px; font-weight: bold; font-size: 16px;">Weather Radio Settings</p>
-        <button id="toggle-weather-radio" class="submenu-button" onclick="toggleWeatherRadio();">
-            <i class="fas fa-radio"></i> Toggle Stations
-        </button>
-        <p>Toggle the display of weather radio stations on the map. Stations are provided by <a href="https://weatherradio.org" target="_blank">GWES WeatherRadio</a> from participating contributors.</p>
-    </div>
-</div>
-
-
-
-   <!-- Info menu -->
-<div id="info-menu">
-    <div class="menu-header">
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
-    </div>
-    <div id="info-content">
-        <button id="general-info-button" class="menu-button" onclick="toggleSubMenu('general-info');">
+    <!--Info menu-->
+    <div id="info-menu">
+        <div class="menu-header">
+            <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div id="info-content">
+            <button onclick="toggleSubMenu('general-info')" class="submenu-button">
             <i class="fa-solid fa-info-circle"></i> General Info <i class="fa-solid fa-chevron-right"></i>
         </button>
-
-        <button id="attributions-button" class="menu-button" onclick="toggleSubMenu('attributions');">
+            <button onclick="toggleSubMenu('attributions')" class="submenu-button">
             <i class="fa-solid fa-star"></i> Attributions <i class="fa-solid fa-chevron-right"></i>
         </button>
-   <button id="contact-me-button" class="menu-button" onclick="window.location.href='mailto:wxtership@xtremewx.com';">
-    <i class="fa-solid fa-envelope"></i> Contact Me <i class="fa-solid fa-chevron-right"></i>
-</button>
-
-        <button id="github-button" class="menu-button" onclick="window.open('https://github.com/wxtership/xwdradar', '_blank');">
-            <i class="fa-brands fa-github"></i> GitHub Page <i class="fa-solid fa-chevron-right"></i>
+            <button onclick="window.location.href='https://github.com/Nodysey/radar/issues/new?labels=bug'" class="submenu-button">
+            <i class="fa-solid fa-bug"></i> Report a Bug <i class="fa-solid fa-external-link-alt"></i>
         </button>
-     
-    </div>
-</div>
-
-
-<!-- Alert List Button -->
-<div id="alert-list-button-container">
-    <button id="alert-list-button" onclick="toggleAlertListMenu();">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-    </button>
-</div>
-
-<!-- Alert List Menu -->
-<div id="alert-list-menu">
-    <div class="menu-header">
-        <p class="menu-title">Active Weather Alerts</p>
-        <button class="exit-button" onclick="toggleAlertListMenu();">
-            <i class="fa-solid fa-times"></i>
+            <button onclick="window.location.href='https://github.com/Nodysey/radar/issues/new?labels=suggestion'" class="submenu-button">
+            <i class="fa-solid fa-comments"></i> Suggestions <i class="fa-solid fa-external-link-alt"></i>
         </button>
+            <button onclick="window.location.href='https://github.com/nodysey/radar'" class="submenu-button">
+            <i class="fa-brands fa-github"></i> Source <i class="fa-solid fa-external-link-alt"></i>
+        </button>
+        </div>
     </div>
 
-  <!-- No Alerts Message -->
-<div id="no-alerts-message" style="display: block; text-align: center; padding: 20px; color: white; margin-top: 65px;">
-    <i class="fa-solid fa-triangle-exclamation" style="font-size: 50px; color: white;"></i> <!-- Icon with a slash through it -->
-    <p style="font-size: 20px; margin-top: 15px;">Alerts are toggled off</p>
-    <!-- Toggle Alerts Button below the message -->
-    <button id="toggle-alerts-button" onclick="toggleAlerts();" class="toggle-alerts-button">
-        <i class="fa-solid fa-triangle-exclamation"></i> Toggle Alerts
-    </button>
-</div>
-
-
-    <!-- Alert log items will be dynamically inserted here -->
-    <ul id="alert-log"></ul>
-</div>
-
-<div id="connection-status" class="connection-status hide">
-    <!-- SVG icon for no internet -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-    <span id="connection-message">No internet connection</span>
-</div>
-
-
-<!-- General Info submenu -->
-<div id="general-info">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('info-menu');"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+    <!-- General Info submenu -->
+    <div id="general-info">
+        <div class="menu-header">
+            <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('info-menu');"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div style="margin-top: 10px;">
+            <p><b>General Information:</b></p>
+            <p><b>Version: </b>1.1.0</p>
+            </p>
+            <b>Build Number:</b> 1
+            </p>
+            <!-- Add more general information as needed -->
+        </div>
     </div>
-    <div style="margin-top: 10px;">
-        <p><b>General Information</b></p>
-        
-        <p>Version: 1.5.0</p>
-         <p>Build Number: 52</p>
 
-<p><b> Update Log</b></p>
-<p>Version 1.5.0: A few more updates! We added Potential Disturbance Areas to the radar! We also gave the UI a small refresh, and even added an Animation Speed toggle! - 11/10/2024
-</p>
-<p>Version 1.4.0: Another big update! We just added the ability to listen to over 40 NOAA Weather Radio stations on the radar! We also added an alert list and fixed a few bugs! - 11/10/2024
-</p>
-<p>Version 1.3.0: More features! We added Mesoscale Discussions to the radar, as well as changing Map Type and Storm Report settings too. - 10/30/2024
-</p>
-<p>Version 1.2.0: New features incoming! We added real-time lightning strikes, changed our alert & watch color schemes, and improved performance by a ton! - 10/17/2024
-</p>
-<p>Version 1.1.8: Another small update! We just added the ability to read out an alert on the radar! As always, we fixed a few bugs as well. - 10/14/2024
-</p>
-<p>Version 1.1.7: More updates! We just added Special Marine and Extreme Wind Warnings to the radar! We also squashed a few bugs too. - 10/10/2024
-</p>
-<p>Version 1.1.6: Another radar update! We refreshed our hurricane icons, made some performance updates, and fixed some bugs as well. - 10/7/2024
-</p>
-<p>Version 1.1.5: New features and bug fixes! We just added hurricane tracks and data into the radar as well as a few bug fixes. - 9/30/2024
-</p>
-<p>Version 1.1.0: Another update? You bet! We just integrated SPC Outlooks into the radar as well as a new map type we're calling Deep Dark Mode. - 8/20/2024
-</p>
-<p>Version 1.0.5: New feature! We just added real-time tornado, wind, and hail reports to the radar! We also fixed a few bugs as well. - 8/15/2024
-</p>
-<p>Version 1.0.0: Radar released! Current features include radar, near-instant alerts, watches, map types, and (a lot of) customization! - 8/10/2024
-</p>
+    <!-- Attributions submenu -->
+    <div id="attributions">
+        <div class="menu-header">
+            <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('info-menu');"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div style="margin-top: 10px;">
+            <p><b>Attributions:</b></p>
+            <div style="height: 0px;"></div>
+            <p>
+                Radar Tiles: <a href="https://rainviewer.com/api.html" target="_blank">RainViewer</a><br>
+                Map Tiles: <a href="https://leafletjs.com" target="_blank">Leaflet</a>, <a href="https://www.mapbox.com" target="_blank">Mapbox</a>, and <a href="https://www.maptiler.com" target="_blank">Maptiler</a><br>
+                Warnings: <a href="https://www.weather.gov/documentation/services-web-api#/" target="_blank">NWS API</a><br>
+                Watches: <a href="https://www.mesonet.agron.iastate.edu/request/gis/spc_watch.phtml" target="_blank">IEM WW Archive</a>
+            </p>
+            <p><b>made with <a id="credits-heart-link" href="https://busybird15.github.io/radar"><i class="fa-solid fa-heart" id="credits-heart" style="color: #5D9AFC;"></i></a> by <a href="https://x.com/busybird150" target="_blank">BusyBird15</a>, <a href="https://busybird15.github.io/radar" target="_blank">The Weather Team</a>, and extra contributions by <a href="https://hbstv.net/hainesnoids" target="_blank">@hainesnoids</a>.</b></p>
+        </div>
     </div>
-</div>
 
-<!-- Attributions submenu -->
-<div id="attributions">
-    <div class="menu-header">
-        <button class="back-button" style="width: 40px;" onclick="toggleMainMenu('info-menu');"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="exit-button" style="width: 40px;" onclick="toggleMainMenu('');"><i class="fa-solid fa-times"></i></button>
+    <div id="mapid"></div>
+
+    <div id="alert-popup" class="alert-popup">
+        <div class="popup-header">
+            <div class="popup-header-title" id="popup-title">Alert Title</div>
+            <button onclick="closeAlertPopup()"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <p id="popup-details"></p>
+        <p id="popup-hazards-impacts"></p>
+        <p id="popup-description" style="margin-bottom: 10px;"></p>
+        <p id="popup-action"></p>
     </div>
-    <div style="margin-top: 10px;">
-        <p><b> Main Attributions</b></p>
-        <div style="height: 0px;"></div>
-        <p>Built for: <a href="https://xtremewx.com/" target="_blank">Xtreme Weather Discord</a> by <a href="https://xtremewx.com/author/wxtership" target="_blank">@wxtership</a></p>
-<p>Made possible by: <a href="https://x.com/busybird150" target="_blank">BusyBird15</a> & <a href="https://busybird15.github.io/radar" target="_blank">The Weather Team</a></p>
-<p><b> Other Attributions</b></p>
-        
-        <p>Map Tiles: <a href="https://leafletjs.com" target="_blank">Leaflet</a> & <a href="https://www.maptiler.com" target="_blank">MapTiler</a></p>
-        <p>Radar Tiles: <a href="https://rainviewer.com/api.html" target="_blank">RainViewer</a></p>
-        <p>Warnings: <a href="https://www.weather.gov/documentation/services-web-api#/" target="_blank">NWS API</a></p>
-        <p>Watches: <a href="https://www.mesonet.agron.iastate.edu/request/gis/spc_watch.phtml" target="_blank">IEM WW Archive</a></p>
-        <p>Discussions: <a href="https://mapservices.weather.noaa.gov/vector/rest/services/outlooks/spc_mesoscale_discussion/MapServer" target="_blank">ESRI & SPC</a></p>
-        <p>Hurricanes: <a href="https://esri-disasterresponse.hub.arcgis.com/maps/248e7b5827a34b248647afb012c58787/about" target="_blank">ESRI & NHC</a></p>
- <p>Disturbances: <a href="https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer" target="_blank">ESRI & NHC</a></p>
- <p>Reports: <a href="https://www.spc.noaa.gov/climo/reports/" target="_blank">SPC Reports Archive</a></p>
- <p>Outlooks: <a href="https://www.spc.noaa.gov/gis/" target="_blank">SPC GIS Portal</a></p>
-  <p>Lightning: <a href="https://utility.arcgis.com/usrsvcs/servers/a99a3d10fbf64f13897c8165d5393fca/rest/services/Severe/Lightning_CONUS/MapServer" target="_blank">ESRI & DTN</a></p>
-<p>Radio: <a href="https://weatherradio.org" target="_blank">GWES WeatherRadio</a></p>
-    </div>
-</div>
 
-    
-
-    <div id="mapid" style="border-radius: 5px; position: absolute; top: 10px; left: 10px; bottom: 10px; right: 10px;"></div>
-
-<div id="alert-popup" class="alert-popup">
-    <div class="popup-header">
-        <div class="popup-header-title" id="popup-title">Alert Title</div>
-        <button onclick="closeAlertPopup()"><i class="fa-solid fa-times"></i></button>
-    </div>
-    <p id="popup-details"></p>
-    <p id="popup-hazards-impacts"></p>
-    <p id="popup-description" style="margin-bottom: 10px;"></p>
-    <p id="popup-action"></p>
-   <!-- Full-width Play/Pause button -->
-<button id="play-pause-btn" onclick="toggleListen()" style="width: 100%; height: 40px; border-radius: 10px; background-color: #636381; color: white; border: 2px solid white; display: flex; align-items: center; justify-content: center; font-size: 18px;">
-    <i class="fa-solid fa-volume-up" style="margin-right: 8px;"></i> Play Alert
-</button>
- </div>
-    
-    <div>
-      <div id="watch-popup" class="alert-popup">
+    <div id="watch-popup" class="alert-popup">
         <div class="popup-header">
             <div class="popup-header-title" id="watch-popup-title">Watch Title</div>
             <button onclick="closeWatchPopup()"><i class="fa-solid fa-times"></i></button>
@@ -578,28 +228,12 @@
         <p id="watch-popup-details"></p>
         <p id="watch-popup-probabilities"></p>
     </div>
-   
-<div id="introduction-screen" class="intro-screen">
-    <div class="intro-content">
-        <h2>Hey there!</h2>
-        <p>Thanks for checking out the official Xtreme Weather radar!
-        </p>
-
-    <p>The app will always be free to use and is completely ad-free. If you have any suggestions or happen to find any bugs, feel free to email me at: <a href="mailto:wxtership@xtremewx.com">wxtership@xtremewx.com</a>.
-
-     <p>There's a ton of settings to customize the radar exactly how you want it. These include map types, smoothing, color schemes, and much more. You can find these in the <i class="fa-solid fa-layer-group stacked-icon"></i> Layers Menu or after you click "Continue." Your preferences will also save the next time you come back!</p>
-
-       <button id="intro-continue-button" class="intro-button">
-    <i class="fa-solid fa-check-circle"></i> Continue
-</button>
-
-
-<p class="intro-note">You’ll only see this popup once, or if you clear your browser cache.</p>
+    <audio paused src="/easteregg/menu.1.wav" id="ds_menusound_1"></audio>
+    <audio paused src="/easteregg/menu.2.wav" id="ds_menusound_2"></audio>
+    <div class="prompt-buttons">
+        <button id="prompt-button1" class="prompt-button"><img class="prompt-button" src="easteregg/cancel.png"></button>
+        <button id="prompt-button2" class="prompt-button"><img class="prompt-button" src="easteregg/yes.png"></button>
     </div>
-</div>
-</div>
-
-<script src="script.js"></script>
-
+    <script src="index.js"></script>
 </body>
 </html>
