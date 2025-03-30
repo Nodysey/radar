@@ -522,7 +522,8 @@ function changeRadarPosition(position, preloadOnly, force) {
 
     var pastOrForecast = nextFrame.time > Date.now() / 1000 ? 'Forecast' : (nextFrame.time === mapFrames[lastPastFramePosition].time ? 'Current' : 'Past');
 
-    document.getElementById("timestamp").innerHTML = pastOrForecast + " • " + formatDate(new Date(nextFrame.time * 1000).toISOString());
+    //document.getElementById("timestamp").innerHTML = pastOrForecast + " • " + formatDate(new Date(nextFrame.time * 1000).toISOString());
+    document.getElementById("timestamp").innerHTML = formatDate(new Date(nextFrame.time * 1000).toISOString());
 };
 
 document.getElementById("timeline-slider").oninput = function() {
